@@ -1,6 +1,5 @@
 body{
-    
-    font-family: 'arial rounded MT';
+        font-family: 'arial rounded MT';
     width: 100%;
     height: 100%;
    background-repeat: repeat;
@@ -9,8 +8,7 @@ body{
     margin-top: 80px;
     padding:30px;
     z-index: 1;
-    
-}
+ }
 
 .home-bg{
     background-image: url("images/Homepage Background.jpg");
@@ -22,7 +20,9 @@ body{
 
 .signin-bg{
     background-image: url("images\Sign In Background.jpg"); 
-}
+    }
+
+
 
 #image-overlay1{
     position: absolute;
@@ -32,7 +32,7 @@ body{
     bottom: 0;
     width: 100%;
     height: 500%;
-    background: rgba(70, 218, 191, 0.8);
+    background: rgba(70, 218, 191, 0.6);
     z-index: 1;
    }
 
@@ -113,8 +113,6 @@ border-radius: 60px;
 z-index: 3;
  
    }
-
-  
 
    #hp1{
     box-sizing: border-box;
@@ -384,12 +382,117 @@ color: #4E4D4D;
 z-index: 3;
    }
 
+   /*sign-in content below */
+
+   .content5{
+    width: 600px;
+    height: 116px;
+    font-family: 'arial rounded MT';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 23px;
+    text-align: center;
+        color: #4E4D4D;
+        margin-left: 20%;
+    margin-top: 5%;
+    z-index: 3;
+
+   }
+
+   .mainsignin{
+    width: 600px;
+    height: 116px;
+    font-family: 'arial rounded MT';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+        color: #4E4D4D;
+        margin-left: 5%;
+    margin-top: 1%;
+    z-index: 3;
+   }
+
+   input[type=text]{
+    width: 600px;
+    height: 60px;
+    background-color: #4E4D4D;
+    color: white;
+    opacity: .4;
+    border-radius: 40px;
+        margin-left: 5%;
+   }
+
+   input[type=submit]{
+    box-sizing: border-box;
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 24px;
+gap: 10px;
+background: rgba(70, 218, 191, 0.75);
+border: 1px solid #4E4D4D;
+border-radius: 8px;
+margin-top: 10%;
+margin-left: 5%;
+width: 600px;
+height: 60px;
+border-radius: 40px;
+
+font-family: 'Dosis';
+font-style: normal;
+font-weight: 400;
+font-size: 32px;
+line-height: 37px;
+padding: 1px;
+/* identical to box height */
+color: #4E4D4D;
+
+   }
+
+   .signicon{
+    border: solid;
+    border-radius: 40px;
+    width: 600px;
+    height: 60px;
+    align-items: center;
+    padding-top: 15px;
+       }
+   
+
+   input[type=image]{
+    padding-right:20px;
+    background-color: transparent;
+   }
+ 
+   /*create account page */
+
+   .content6{
+    width: 600px;
+    height: 116px;
+    font-family: 'arial rounded MT';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+        color: #4E4D4D;
+        margin-left: 20%;
+    margin-top: 5%;
+    z-index: 3;
+
+   }
+
+
 
    .footer{
-    left: 0;
-    bottom: 0;
+    margin-left: 0%;
+    margin-bottom: 0%;
     width: 100%;
-       text-align: center;
+    text-align: center;
    }
 
    #footer{
@@ -401,7 +504,6 @@ font-size: 24px;
 line-height: 25px;
 text-decoration: underline;
 color: #4E4D4D;
-
    }
   
   
