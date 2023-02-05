@@ -22,6 +22,10 @@ body{
     background-image: url("images\Sign In Background.jpg"); 
     }
 
+.account-bg{
+        background-image: url("images\My Account Background.jpg"); 
+        }
+
 
 
 #image-overlay1{
@@ -486,8 +490,105 @@ color: #4E4D4D;
 
    }
 
+   /* Actual Account page */
 
 
+   .content7{
+    width: 600px;
+    height: 20px;
+    font-family: 'arial rounded MT';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 30px;
+    text-align: center;
+        color: #4E4D4D;
+        margin-left: 15%;
+        z-index: 2;
+   }
+
+   .accountsettings{
+    font-family: 'arial rounded MT';
+  font-style: normal;
+      font-size: 16px;
+      text-align: center;
+      color: #4E4D4D;
+    z-index: 2;
+  
+  
+}
+
+   .profilepicture{
+ position: absolute;
+left: 675px;
+top: 10px;
+font-size: 16px;
+z-index: 2;
+
+   }
+
+   .checkouthistory{
+    text-align: left;
+    font-size: 20x;
+    margin-left: 100px;
+    margin-top: 100px;
+    z-index: 2;
+   }
+
+   .checkouthistory2{
+    text-align: left;
+    font-size: 20x;
+    margin-left: 100px;
+    margin-top: 60px;
+    z-index: 2;
+   }
+
+   .checkoutlist{
+    text-align: left;
+    font-size: 16px;
+    margin-left: 100px;
+   }
+
+   .checkoutlist2{
+    text-align: left;
+    font-size: 16px;
+    margin-left: 100px;
+   }
+
+   .favoritebooklist{
+    text-align: left;
+    font-size: 16x;
+    margin-left: 100px;
+    list-style-type: none;
+      }
+
+   .accountpgbtn{
+    box-sizing: border-box;
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 24px;
+gap: 10px;
+width: 272px;
+height: 76px;
+background: rgba(70, 218, 191, 0.75);
+border: 1px solid #4E4D4D;
+border-radius: 8px;
+margin-left: 40%;
+width: 224px;
+height: 28px;
+
+font-family: 'Dosis';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 28px;
+/* identical to box height */
+color: #4E4D4D;
+   }
+
+  
    .footer{
     margin-left: 0%;
     margin-bottom: 0%;
