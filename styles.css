@@ -81,6 +81,66 @@ font-weight: 400;
 font-size: 1.5rem;
 line-height: 1rem;
        }
+       /*mobile coding */
+
+       #hamburgericon{
+        margin-left: 100%;
+        margin-top:10%;
+        display:none;
+       }
+
+       .hamburgericon div{
+        width:35px;
+        height: 3px;
+        background-color: white;
+        margin: 6px 0;
+        transition:0.4s;
+       }
+
+       .open .bar1{
+        -webkit-transform: rotate(-45deg) translate(-6px,6px);
+        transform: rotate(-45deg) translate(-6px, 6px);
+       }
+
+       .open .bar2{
+        opacity: 0;
+       }
+
+       .open .bar3{
+        -webkit-transform: rotate(45deg) translate(-6px, -8px);
+        transform: rotate(45deg) translate(-6px, -8px);
+       }
+
+       .open .mobilemenu{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+       }
+
+       .mobilemenu{
+        display:none;
+        position:absolute;
+        top:50px;
+        left: 0;
+        height: calc(100vh-50px);
+        width: 100%;
+        list-style: none;
+        color: black;
+        z-index: 2;
+       }
+     @media(max-width: 880px){
+         .navbar{
+            display: none;
+        }
+
+        #hamburgericon{
+            display: block;
+        }
+        
+     }
+
+
 
    .library{
 border-style: solid;
@@ -316,11 +376,7 @@ color: #4E4D4D;
    }
 
 
-   @media(min-width:360px){
-    .indexcontainer {
-        font-size: 1.0em;
-    }
-  }
+  
 
   @media (min-width:500px){
     .indexcontainer{
@@ -836,24 +892,35 @@ text-align: center;
     }
 }
 
-   
+/*footer icons are not spaced properly */ 
+
+.ficons{
+    padding-left: 2%;
+  }
+
    .footer{
-    margin-bottom: 0%;
-    margin-left: 15%;
+    position: relative;
+    bottom: 0;
+    margin-left: 25%;
     width: 100%;
-    text-align: center;
+    height: 10%;
+    z-index: 2;
+
    }
 
    #footer{
-    text-align: center;
-    font-family: 'arial rounded MT';
+       font-family: 'arial rounded MT';
 font-style: normal;
 font-weight: 400;
 font-size: 1.5rem;
 line-height: 2rem;
 text-decoration: underline;
 color: #4E4D4D;
+
    }
+
+ 
+
 
  
   
