@@ -2,34 +2,28 @@ body{
         font-family: 'arial rounded MT';
     width: 100%;
     height: 100%;
-   background-repeat: repeat;
+   background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    margin-top: -10%;
-    padding:20%;
-    z-index: 1;
+        z-index: 1;
  }
+
 
 .home-bg{
     background-image: url("images/Homepage Background.jpg");
+    background-repeat: repeat;
 }
 
-.about-bg{
-    background-image: url("images\about Background.jpg"); 
-}
+#aboutbk{
+   min-height: 100%;
+   min-width: 800px;
+   width: 100%;
+   height: auto;
+   position: auto;
+   margin: 0;
+ }
 
-.signin-bg{
-    background-image: url("images\Sign In Background.jpg"); 
-    }
-
-.account-bg{
-        background-image: url("images\My Account Background.jpg"); 
-        }
-
-        .catalog-bg{
-            background-image: url("images\Catalog Background.jpg"); 
-            }
-        
+     
             .img{
                 max-width: 100%;
                 display: block;
@@ -47,6 +41,45 @@ body{
     background: rgba(70, 218, 191, 0.6);
     z-index: 1;
    }
+
+   #image-overlay2{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    height: 192%;
+    background: rgba(70, 218, 191, 0.6);
+    z-index: 1;
+   }
+
+   
+   @media screen and (max-width: 880px){
+    .body{
+        max-width: 100%;
+        max-height: 260%;
+    }
+
+    .home-bg{
+         background-repeat: repeat;
+         max-width: 100%;
+         max-height: 260%;
+    }
+        
+                .img{
+                    max-width: 80%;
+                    display: flex;
+                }
+    
+    
+    #image-overlay1{
+        max-width: 100%;
+        max-height: 260%;
+       }
+   }
+
+   /*create new image overlay code for other pages with smaller width and height*/
 
 header{
         top: 0;
@@ -81,62 +114,52 @@ font-weight: 400;
 font-size: 1.5rem;
 line-height: 1rem;
        }
-       /*mobile coding */
 
-       #hamburgericon{
-        margin-left: 100%;
-        margin-top:10%;
+       /*INDEX mobile coding */
+
+       .hamburger{
         display:none;
        }
 
-       .hamburgericon div{
-        width:35px;
-        height: 3px;
-        background-color: white;
-        margin: 6px 0;
-        transition:0.4s;
-       }
-
-       .open .bar1{
-        -webkit-transform: rotate(-45deg) translate(-6px,6px);
-        transform: rotate(-45deg) translate(-6px, 6px);
-       }
-
-       .open .bar2{
-        opacity: 0;
-       }
-
-       .open .bar3{
-        -webkit-transform: rotate(45deg) translate(-6px, -8px);
-        transform: rotate(45deg) translate(-6px, -8px);
-       }
-
-       .open .mobilemenu{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: flex-start;
-       }
-
-       .mobilemenu{
+       .bar{
         display:none;
-        position:absolute;
-        top:50px;
-        left: 0;
-        height: calc(100vh-50px);
-        width: 100%;
-        list-style: none;
-        color: black;
-        z-index: 2;
        }
-     @media(max-width: 880px){
-         .navbar{
-            display: none;
+       
+
+      
+     @media screen and (max-width: 880px){
+         .nav-menu{
+            position: fixed;
+            left: -150%;
+            top: 5rem;
+            flex-direction: column;
+            background-color: #fff;
+            width: 100%;
+            border-radius: 10px;
+            transition: 0.3s;
+            box-shadow: 0 10px  27px rgba(0, 0, 0, 0.05);
+            
         }
 
-        #hamburgericon{
+        .nav-menu.active{
+            left:0;
+        }
+
+             .hamburger{
             display: block;
-        }
+            cursor: pointer;
+            z-index: 3;
+                    }
+
+                    .bar{
+                        display:block;
+                        width:25px;
+                        height: 3px;
+                        margin: 5px auto;
+                        -webkit-transition: all 0.3s ease-in-out;
+                        transition: all 0.3s ease-in-out;
+                        background-color: #101010;
+                       }
         
      }
 
@@ -160,7 +183,7 @@ border-radius: 5px;
     box-sizing: border-box;
     position: absolute;
 left: -3rem;
-top: -rem;
+top: -2rem;
   border: 4px solid rgba(70, 218, 191, 0.5);
 filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 border-radius: 2rem;
@@ -190,8 +213,8 @@ z-index: 3;
     box-sizing: border-box;
     display: -webkit-box;
     margin-left: 30%;
-    margin-top: 10%;
-    width: 70%;
+    margin-top: 15%;
+    width: 40%;
     position:relative;
     z-index: 1;
 border: .25rem solid rgba(70, 218, 191, 0.75);
@@ -216,6 +239,51 @@ z-index: 4;
 
    }
 
+   @media screen and (max-width: 880px) {
+
+    #logo{
+        width: 30%;
+        height: 30%;
+             border: 2px solid rgba(70, 218, 191, 0.5);
+        border-radius: 1rem;
+
+       }
+
+    
+        .indexcontainer{
+            display: inline-block;
+            max-width:50%;
+        }
+    
+    
+    
+          .container1{
+        position: absolute;
+    width: 75%;
+    height: 50%;
+    left: 15%;
+    top: 20%;
+    
+    background: rgba(224, 224, 224, 0.75);
+    border-radius: 2rem;
+    z-index: 3;
+       }
+    
+       #hp1{
+         margin-left: 80%;
+        margin-top: 50%;
+        width: 50%;
+        height: 50%;
+        border: .2rem solid rgba(70, 218, 191, 0.75);
+        border-radius: 1rem;
+       }
+    
+       .content1{
+         font-size: .5rem;
+        line-height: .5rem;
+       }
+    
+   }
  
    .container2{
  position: absolute;
@@ -300,6 +368,54 @@ color: #4E4D4D;
 
    }
     
+
+   @media screen and (max-width: 880px) {
+
+    .container2{
+    position: absolute;
+       max-width: 80%;
+       max-height: 60%;
+       left: 15%;
+       top: 80%;
+          }
+       
+          .location{
+              font-size: .75rem;
+       line-height: .75rem;
+          }
+          
+              
+          th{
+            font-size: .75rem;
+           line-height: .75rem;      
+          }
+       
+          tr{
+         
+           font-size: .5rem;
+           line-height: .5rem;
+          }
+
+          table{
+                margin-left: 25%;
+                max-width: 80%;
+                
+          }
+       
+          hr{
+            
+           width: 100px;
+          }
+          .donations{
+            font-size: .75rem;
+            line-height: .75rem;
+          }
+       
+          .content2{
+            font-size: .5rem;
+            line-height: .5rem;       
+          }
+   }
    .container3{
    position: absolute;
 width: 75%;
@@ -375,32 +491,57 @@ line-height: 1rem;
 color: #4E4D4D;
    }
 
+   @media screen and (max-width: 880px) {
+    .container3{
+        position: absolute;
+           max-width: 80%;
+           max-height: 60%;
+           left: 15%;
+           top: 150%;
+              }
 
-  
+    .eventcal{
+    font-size: .75rem;
+    line-height: .75rem;
+  }
 
-  @media (min-width:500px){
-    .indexcontainer{
-        display: inline-block;
-        width:50%;
+  .content3{
+    font-size: .5rem;
+    line-height: .5rem;       
+  }
+
+  #hp2{
+    margin-left: 10%;
+    margin-top: 10%;
+    max-width: 80%;
+    max-height: 80%;
+    border: .2rem 
+    border-radius: 1rem;
     }
-}
 
-@media (min-width:600px){
-    .indexcontainer{
-        font-size: 16px;
-        margin-left: auto;
-        margin-right: auto;
-        
-    }
-   
-}
+   .searchcatbtn{
+padding: .75rem;
+gap: .75rem;
+width: 10%;
+height: 5%;
+border: .10rem solid #4E4D4D;
+border-radius: .5rem;
+margin-left: 45%;
+
+
+font-size: .5rem;
+line-height: .5rem;
+   }
+   }
+
+
    
 /*about page codes */
 
 
 .about{
 
-        width: 75%;
+        width: 100%;
         height: 100%;
         font-family: 'arial rounded MT';
         font-style: normal;
@@ -409,10 +550,20 @@ color: #4E4D4D;
         line-height: 1rem;
         text-align: center;
         color: #4E4D4D;
-        margin-left: 15%;
-        margin-top: 5%;
         z-index: 3;
 }
+
+.content4{
+    text-align: center;
+    font-family: 'arial rounded MT';
+font-style: normal;
+font-weight: 400;
+font-size: 3rem;
+line-height: 1rem;
+color: #4E4D4D;
+margin-top: 5%;
+margin-left: 15%;
+   }
 
 .mission{
     text-align: left;
@@ -464,12 +615,61 @@ line-height: 1rem;
 color: #4E4D4D;
    }
 
+
+   @media screen and (max-width: 880px){
+
+    .about{
+        max-width: 880px;
+        max-height: 900px;
+    }
+
+    #aboutbk{
+        min-width: 320px;
+        min-height: 400px;
+    }
+    
+    #image-overlay2{
+        max-width: 100%;
+        max-height: 100%;
+       }
+    
+.mission{
+        font-size: .75rem;
+ line-height: .75rem;
+    }
+
+   .mvp{
+        font-size: .5rem;
+ line-height: .5rem;
+    }
+
+    .content4{
+        font-size: 1rem;
+ line-height: 1rem;
+    }
+
+      
+   .aboutpgbutton{
+        padding: .75rem;
+        gap: .75rem;
+        width: 15%;
+        height: 10%;
+        border: .10rem solid #4E4D4D;
+        border-radius: .5rem;
+        margin-left: 45%;
+        
+        
+        font-size: .5rem;
+        line-height: .5rem;
+           }
+    }
+
    /*sign-in content below */
 
 .welcome{
     position: absolute;
 width: 70%;
-height: 20%;
+height: 50%;
 left: 15%;
 top: 5%;
 
@@ -489,18 +689,19 @@ border-radius: 2rem;
    }
 
    .content5{
-    width: 60%;
-    height: 20%;
+    width: 600px;
+    height: 116px;
     font-family: 'arial rounded MT';
     font-style: normal;
     font-weight: 400;
-    font-size: 1.5rem;
-    line-height: 1.5rem;
+    font-size: 30px;
+    line-height: 23px;
     text-align: center;
         color: #4E4D4D;
-        margin-left: 30%;
+        margin-left: 20%;
     margin-top: 5%;
-    z-index:  2;
+    z-index: 3;
+
    }
 
    .mainsignin{
@@ -569,6 +770,41 @@ color: #4E4D4D;
     padding-right:1rem;
     background-color: transparent;
    }
+
+
+   @media screen and (max-width: 880px){
+
+    .welcome{
+        max-width: 80%;
+        height: 100%; 
+        padding-left: 10%;
+    }
+    
+       
+       .content5{
+        font-size: 1rem;
+        line-height: 1rem;
+        margin-top: 15%;
+    margin-left: -20%;               }
+    
+       .mainsignin{
+            margin-left: 20%;
+       }
+    
+       .signicon{
+            width: 100%;
+        height: 100%;
+        align-items: center;
+        padding-top: 1rem;
+           }
+       
+       #signinlogo{
+        min-width: 10%;
+        height: 15%;
+             border: 2px solid rgba(70, 218, 191, 0.5);
+        border-radius: 1rem;
+       }
+   }
  
    /*create account page */
 
@@ -585,6 +821,13 @@ color: #4E4D4D;
         margin-left: 20%;
     margin-top: 5%;
     z-index: 3;
+
+   }
+
+   /*Do media query for create account page. Fix this page */
+
+   @media screen and (max-width: 880px){
+
 
    }
 
@@ -698,7 +941,10 @@ line-height: 1rem;
 color: #4E4D4D;
    }
 
-  
+   @media screen and (max-width: 880px){
+
+
+   }
 
    /* Search Catalog PAge*/
     .container4{
@@ -886,23 +1132,43 @@ text-align: center;
 
 }
 
-@media screen   and (min-width:768px) {
-    .carousel-buttons{
-        margin: 1rem;
-    }
-}
+
 
 /*footer icons are not spaced properly */ 
 
-.ficons{
-    padding-left: 2%;
+.icons{
+    min-width: 320px;
+    
   }
 
-   .footer{
+  .indexfooter{
+    position: absolute;
+    top: 390%;
+    margin-left: 45%;
+    min-width: 320px;
+    height: 10%;
+    z-index: 2;
+
+   }
+
+   #indexfooter{
+       font-family: 'arial rounded MT';
+font-style: normal;
+font-weight: 400;
+font-size: 1.5rem;
+line-height: 2rem;
+text-decoration: underline;
+color: #4E4D4D;
+
+   }
+
+  
+
+  .footer{
     position: relative;
     bottom: 0;
-    margin-left: 25%;
-    width: 100%;
+    margin-left: 45%;
+    width: 100px;
     height: 10%;
     z-index: 2;
 
@@ -919,7 +1185,47 @@ color: #4E4D4D;
 
    }
 
- 
+   /*on mobile devices, footer continues off page. Figure out how to fix it */
+
+   @media screen and (max-width: 880px) {
+    
+    footer{
+        max-width: 880px;
+        height: 10%;
+        bottom: 0;
+    }
+    #footer{
+        margin-top: 30%;
+        font-size: .75rem;
+        line-height: .75rem;
+        
+    }
+
+    .ficons{
+        padding: .25rem;
+        max-width: 10%;
+        max-height: 5%;
+    }
+    .indexfooter{
+        top: 210%;
+        max-width: 880px;
+        height: 10%;
+    }
+    
+    #indexfooter{
+        font-size: .75rem;
+        line-height: .75rem;
+        
+    }
+
+    .icons{
+max-width: 80%;
+max-height: 80%;
+    }
+
+     
+    
+   }
 
 
  
